@@ -11,3 +11,9 @@ variable "availability_zones" {
 	type = "list"
 	default = ["us-east-1a", "us-east-1b"]
 }
+
+# Environment variable TF_VAR_db_password needs to be set
+variable "db_password" {
+    type = "string"
+    default = "password"
+}

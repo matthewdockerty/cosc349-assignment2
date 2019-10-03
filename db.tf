@@ -17,7 +17,7 @@ resource "aws_docdb_cluster" "db_c" {
   cluster_identifier      = "cosc349-docdb"
   engine                  = "docdb"
   master_username         = "cosc349"
-  master_password         = "password"
+  master_password         = "${var.db_password}"
   port                    = 27017
   db_cluster_parameter_group_name = "${aws_docdb_cluster_parameter_group.db_pg.name}"
   vpc_security_group_ids = ["${aws_security_group.app_servers.id}"]
