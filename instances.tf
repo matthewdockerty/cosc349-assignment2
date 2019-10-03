@@ -16,7 +16,7 @@ resource "aws_instance" "app_servers" {
         cd /opt
         git clone https://github.com/matthewdockerty/cosc349-assignment2-deployment
         cd cosc349-assignment2-deployment
-        chmod +x test
+        chmod +x server
         mv app.service /lib/systemd/system/app.service
 
         echo -e "Environment=SERVER_NAME=${count.index}\nEnvironment=CONTENT_PATH=/opt/cosc349-assignment2-deployment/static/\nEnvironment=DB_HOST=${aws_docdb_cluster.db_c.master_username}:${aws_docdb_cluster.db_c.master_password}@${aws_docdb_cluster.db_c.endpoint}:${aws_docdb_cluster.db_c.port}" >> /lib/systemd/system/app.service
