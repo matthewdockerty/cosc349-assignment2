@@ -19,7 +19,7 @@ resource "aws_instance" "app_servers" {
         chmod +x test
         mv app.service /lib/systemd/system/app.service
 
-        echo -e "Environment=SERVER_NAME=${count.index}" >> /lib/systemd/system/app.service
+        echo -e "Environment=SERVER_NAME=${count.index}\nEnvironment=CONTENT_PATH=/opt/cosc349-assignment2-deployment/static/\nEnvironment=DB_HOST=cosc349:password@cosc349-docdb.cluster-co0luenfpcle.us-east-1.docdb.amazonaws.com:27017" >> /lib/systemd/system/app.service
         systemctl start app
         systemctl enable app
         systemctl status app

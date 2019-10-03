@@ -1,3 +1,5 @@
+# Guidance from https://medium.com/@geekrodion/amazon-documentdb-and-aws-lambda-with-terraform-34a5d1061c15
+
 resource "aws_docdb_subnet_group" "db_sg" {
   subnet_ids = "${aws_subnet.public.*.id}"
 }
