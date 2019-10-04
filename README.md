@@ -1,5 +1,5 @@
 # COSC349 Assignment 2: Your Software in the Cloud
-The purpose of this assignment was to deploy an application to the AWS cloud, making use of virtual machines and cloud services provided by AWS for COSC349, a cloud computing paper at the University of Otago.
+The purpose of this assignment was to deploy an application to the AWS cloud, making use of virtual machines and cloud services, for COSC349, a cloud computing paper at the University of Otago.
 
 The application that this project deploys is a simple online recipe book application that was developed for the first COSC349 assignment: https://github.com/matthewdockerty/cosc349-assignment1
 
